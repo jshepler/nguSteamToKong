@@ -53,7 +53,7 @@ namespace nguSteamToKong
                 var kong_saveData = new SaveData(kong_base64PlayerData, kong_base64Checksum);
                 var kong_base64SaveData = SerializeSaveData(formatter, kong_saveData);
 
-                var newPath = file.FullName.Substring(0, file.FullName.Length - 5) + " (kong).txt";
+                var newPath = file.FullName.Substring(0, file.FullName.Length - 4) + " (kong).txt";
                 File.WriteAllText(newPath, kong_base64SaveData);
 
                 return "downgrade successful";
